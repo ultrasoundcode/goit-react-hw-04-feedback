@@ -25,14 +25,6 @@ export const App = () => {
         return;
     }
   };
-  // const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
-
-  // const onLeaveFeedback = type => {
-  //   setFeedback(prevFeedback => ({
-  //     ...prevFeedback,
-  //     [type]: prevFeedback[type] + 1,
-  //   }));
-  // };
 
   const countTotalFeedback = () => {
     return good + neutral + bad;
@@ -56,6 +48,7 @@ export const App = () => {
           <Statistics
             good={good}
             neutral={neutral}
+            f
             bad={bad}
             total={countTotalFeedback()}
             positivePercentage={countPositiveFeedbackPercentage()}
